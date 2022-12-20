@@ -12,10 +12,10 @@ async function buscarVideos(evento){
         lista.removeChild(lista.firstChild);
     }
 
-    lista.forEach(elemento => 
+    busca.forEach(elemento => 
         lista.appendChild(constroiCard(elemento.titulo, elemento.descricao, elemento.url, elemento.imagem))
 )}
 
-const botaoDePesquisa = document.querySelector(['data-botao-pesquisa']);
+const botaoDePesquisa = document.querySelector('[data-botao-pesquisa]');
 
 botaoDePesquisa.addEventListener('click', evento => buscarVideos(evento));
